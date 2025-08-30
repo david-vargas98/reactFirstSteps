@@ -1,14 +1,13 @@
+import { ItemCounter } from "./shopping-cart/ItemCounter";
+
 export function FirstStepsApp() {
     return (
         <>
-            <h1>Hello world!</h1>
-            <p>This is a paragraph</p>
+            <h1>Shopping cart</h1>
 
-            <button>Click me</button>
-
-            <div>
-            <h2>Hello from inside a div!</h2>
-            </div>
+            <ItemCounter name="Nintendo switch 2" />
+            <ItemCounter name="Pro controller" />
+            <ItemCounter name="Super smash" />
         </>
     )
 }
