@@ -1,4 +1,9 @@
-export const ItemCounter = () => {
+// challenge: create an interface to receive the props and use it into the component to display name
+interface Props {
+    name: string;
+}
+
+export const ItemCounter = ({name}: Props)=> {
     return (
         <section style={{
             display: 'flex',
@@ -7,10 +12,9 @@ export const ItemCounter = () => {
             marginTop: 10
         }}>
             <span style={{
-                backgroundColor: 'red',
                 width: 130
             }}>
-                Nintendo switch 2
+                {name}
             </span>
             <button>+1</button>
             <span>10</span>
