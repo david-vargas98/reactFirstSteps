@@ -15,13 +15,15 @@ export function MyAwesomeApp() {
             <h1>{firstName}</h1>
             <h3>{lastName}</h3>
 
-            <p>{ myFavoriteGames.join(', ') }</p>
+            <p>{myFavoriteGames.join(', ')}</p>
 
-            <h1>{ isActive ? 'Active' : 'Not active' }</h1>
+            <h1>{isActive ? 'Active' : 'Not active'}</h1>
 
-            <p>
-                { JSON.stringify(address) }
-            </p>
+            <p style={{
+                backgroundColor: 'red',
+                borderRadius: 20,
+                padding: 10
+            }}> {JSON.stringify(address)} </p>
         </>
     );
 }
