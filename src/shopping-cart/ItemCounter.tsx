@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+
+import './ItemCounter.css';
+
 // challenge: create an interface to receive the props and use it into the component to display name
 interface Props {
     name: string;
@@ -17,21 +20,26 @@ export const ItemCounter = ({ name, quantity = 1 }: Props) => {
     };
 
     const handleSub = () => {
-        if(count === 1) return;
-        
+        if (count === 1) return;
+
         setCount(count - 1)
     };
 
     return (
-        <section style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 10,
-            marginTop: 10
-        }}>
-            <span style={{
-                width: 130
-            }}>
+        <section
+            className="item-row"
+        // style={{
+        //     display: 'flex',
+        //     alignItems: 'center',
+        //     gap: 10,
+        //     marginTop: 10
+        // }}
+        >
+            <span
+                className="item-text"
+                style={{
+                    color: count === 1 ? 'red' : 'black' // we use style when we apply conditional styles
+                }}>
                 {name}
             </span>
             <button onClick={handleAdd}>+1</button>
