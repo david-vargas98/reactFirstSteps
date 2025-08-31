@@ -1,9 +1,10 @@
 // challenge: create an interface to receive the props and use it into the component to display name
 interface Props {
     name: string;
+    quantity?: number;
 }
 
-export const ItemCounter = ({name}: Props)=> {
+export const ItemCounter = ({name, quantity}: Props)=> {
     return (
         <section style={{
             display: 'flex',
@@ -17,7 +18,7 @@ export const ItemCounter = ({name}: Props)=> {
                 {name}
             </span>
             <button>+1</button>
-            <span>10</span>
+            <span>{quantity}</span>
             <button>-1</button>
         </section>
     )
