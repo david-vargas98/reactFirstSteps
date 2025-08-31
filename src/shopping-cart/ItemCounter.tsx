@@ -4,7 +4,7 @@ interface Props {
     quantity?: number;
 }
 
-export const ItemCounter = ({name, quantity}: Props)=> {
+export const ItemCounter = ({ name, quantity }: Props) => {
     return (
         <section style={{
             display: 'flex',
@@ -17,7 +17,11 @@ export const ItemCounter = ({name, quantity}: Props)=> {
             }}>
                 {name}
             </span>
-            <button>+1</button>
+            <button
+                onClick={() => {
+                    console.log(`Click ${name}`)
+                }}
+            >+1</button>
             <span>{quantity}</span>
             <button>-1</button>
         </section>

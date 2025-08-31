@@ -21,9 +21,6 @@ export function FirstStepsApp() {
                     <ItemCounter key={productName} name={productName} quantity={quantity} />
                 ))
             }
-            {/* <ItemCounter name="Nintendo switch 2" quantity={1} />
-            <ItemCounter name="Pro controller" quantity={1} />
-            <ItemCounter name="Super smash" quantity={1} /> */}
         </>
     )
 }
