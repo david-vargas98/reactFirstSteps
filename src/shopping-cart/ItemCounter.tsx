@@ -1,7 +1,8 @@
 import { useState } from "react";
 
 
-import './ItemCounter.css';
+//import './ItemCounter.css';
+import styles from './ItemCounter.module.css';
 
 // challenge: create an interface to receive the props and use it into the component to display name
 interface Props {
@@ -27,7 +28,8 @@ export const ItemCounter = ({ name, quantity = 1 }: Props) => {
 
     return (
         <section
-            className="item-row"
+            className={ styles['item-row'] } // if style name includes '-' then we use [''] notation
+            // className="item-row"
         // style={{
         //     display: 'flex',
         //     alignItems: 'center',
@@ -36,7 +38,7 @@ export const ItemCounter = ({ name, quantity = 1 }: Props) => {
         // }}
         >
             <span
-                className="item-text"
+                className={ styles.itemText } // if style name it's in camelCase, then we use dot notation 
                 style={{
                     color: count === 1 ? 'red' : 'black' // we use style when we apply conditional styles
                 }}>
