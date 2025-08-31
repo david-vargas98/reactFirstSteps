@@ -5,6 +5,11 @@ interface Props {
 }
 
 export const ItemCounter = ({ name, quantity }: Props) => {
+    //Instructor says that it's better to separate logic from the template, so that:
+    const handleClick = () => {
+        console.log(`Click on ${name}`)
+    }
+
     return (
         <section style={{
             display: 'flex',
@@ -18,9 +23,7 @@ export const ItemCounter = ({ name, quantity }: Props) => {
                 {name}
             </span>
             <button
-                onClick={() => {
-                    console.log(`Click ${name}`)
-                }}
+                onClick={handleClick}
             >+1</button>
             <span>{quantity}</span>
             <button>-1</button>
