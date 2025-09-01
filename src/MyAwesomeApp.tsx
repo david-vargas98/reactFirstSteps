@@ -20,7 +20,7 @@ const myStyles: CSSProperties = {
 
 export function MyAwesomeApp() {
     return (
-        <>
+        <div data-testid="div-app">
             <h1 data-testid="first-name-title">{firstName}</h1>
             <h3>{lastName}</h3>
 
@@ -29,6 +29,6 @@ export function MyAwesomeApp() {
             <h1>{isActive ? 'Active' : 'Not active'}</h1>
 
             <p style={myStyles}> {JSON.stringify(address)} </p>
-        </>
+        </div>
     );
 }
