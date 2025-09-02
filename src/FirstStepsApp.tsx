@@ -14,13 +14,13 @@ const itemsInCart: itemInCart[] = [
 
 export function FirstStepsApp() {
     return (
-        <>
+        <div role="root">
             <h1>Shopping cart</h1>
             {
                 itemsInCart.map(({productName, quantity}) => (
                     <ItemCounter key={productName} name={productName} quantity={quantity} />
                 ))
             }
-        </>
+        </div>
     )
 }
