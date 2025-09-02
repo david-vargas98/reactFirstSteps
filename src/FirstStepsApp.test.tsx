@@ -16,7 +16,7 @@ describe('FirstStepsApp', () => {
         render(<FirstStepsApp />);
 
         //! 3. Assert
-        expect(screen.getAllByRole('root')).toMatchSnapshot();
+        expect(screen.getByRole('root')).toMatchSnapshot();
     });
 
     test('should render the correct number of ItemCounter components', () => {
