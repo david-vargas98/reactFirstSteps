@@ -1,6 +1,6 @@
 // Rule of thump, a test file must contain at least one test, otherwise it will fail
 import { describe, expect, test } from 'vitest';
-import { add, multiply, subtract } from './math.helper';
+import { add, divide, multiply, subtract } from './math.helper';
 
 // we use describe to group tests
 
@@ -81,5 +81,19 @@ describe('multiply', () => {
 
         //! 3. Assertion
         expect(result).toBe(a * b);
+    });
+});
+
+describe('divide', () => {
+    test('should divide two positive numbers', () => {
+        //! 1. Arrange
+        const a = 43;
+        const b = 34;
+
+        //! 2.Act
+        const result = divide(a, b);
+
+        //! 3.Assertion
+        expect(result).toBe(a/b);
     });
 });
